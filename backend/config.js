@@ -4,4 +4,4 @@ dotenv.config();
 
 
 export const PORT = process.env.PORT || 3000;
-export const mongoDBURL = process.env.mongoDBURL || "mongodb://localhost:27017/books-collection";
+export const MONGO_URL = process.env.MONGO_URL || "mongodb://localhost:27017/books-collection";

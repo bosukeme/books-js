@@ -11,7 +11,7 @@ describe('Books API', () => {
     let bookId;
 
     beforeAll(async () => {
-        const dburl = process.env.mongoDBURL
+        const dburl = process.env.MONGO_URL
         await mongoose.connect(dburl, {
             useNewUrlParser: true,
             useUnifiedTopology: true

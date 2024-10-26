@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from 'cors';
 
-import { PORT, mongoDBURL } from "./config.js";
+import { PORT, MONGO_URL } from "./config.js";
 import booksRoute from "./routes/booksRoute.js";
 
 
@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 
 
 mongoose
-    .connect(mongoDBURL)
+    .connect(MONGO_URL)
     .then(() => {
         console.log(`connected to the db`);
         app.listen(PORT, console.log(`app is listening on port: ${PORT}`))
