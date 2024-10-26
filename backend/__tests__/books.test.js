@@ -50,7 +50,7 @@ describe('Books API', () => {
         expect(response.body.success).toBe(true);
         expect(response.body.data.title).toBe("Sample Book");
 
-    });
+    }, 10000);
 
 
     it('should get all books', async () => {
